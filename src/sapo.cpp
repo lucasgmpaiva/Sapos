@@ -4,7 +4,7 @@
   * @author Lucas Gabriel
   * @since 15/03/2018
   * @date 18/03/2018
-  * @sa https://github.com/ggklin/Aula04
+  * @sa https://github.com/lucasgmpaiva/Sapos.git
   */
 
 #include "../include/sapo.hpp"
@@ -62,9 +62,6 @@ void Sapo::pular(){
 	if(distanciaPercorrida<distanciaTotal){
 		distanciaPercorrida+= (rand()%forcaPulo)+1;
 		quantidadePulos++;
-	}
-	if(distanciaPercorrida>=distanciaTotal){
-		distanciaPercorrida = distanciaTotal;
 	}
 }
 

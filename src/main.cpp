@@ -4,7 +4,7 @@
   * @author Lucas Gabriel
   * @since 15/03/2018
   * @date 18/03/2018
-  * @sa https://github.com/ggklin/Aula04
+  * @sa https://github.com/lucasgmpaiva/Sapos.git
   */
 
 #include <iostream>
@@ -33,61 +33,24 @@ int main(){
 		sapinho2.getDistanciaPercorrida() != Sapo::distanciaTotal &&
 	 	sapinho3.getDistanciaPercorrida() != Sapo::distanciaTotal){
 		sapinho1.pular();
+		if(sapinho1.getDistanciaPercorrida() >= Sapo::distanciaTotal){
+			cout << "O sapinho 1 foi o vencedor! " << endl;
+			cout << "Sapinho 1: " << sapinho1.getQuantidadePulos() << "pulos;" << endl;
+			break;
+		}
 		sapinho2.pular();
+		if(sapinho2.getDistanciaPercorrida() >= Sapo::distanciaTotal){
+			cout << "O sapinho 2 foi o vencedor! " << endl;
+			cout << "Sapinho 2: " << sapinho2.getQuantidadePulos() << "pulos;" << endl;
+			break;
+		}
 		sapinho3.pular();
+		if(sapinho3.getDistanciaPercorrida() >= Sapo::distanciaTotal){
+			cout << "O sapinho 2 foi o vencedor! " << endl;
+			cout << "Sapinho 2: " << sapinho1.getQuantidadePulos() << "pulos;" << endl;
+			break;
+		}
 	}
-
-	if(sapinho1.getDistanciaPercorrida() == Sapo::distanciaTotal &&
-		sapinho2.getDistanciaPercorrida() == Sapo::distanciaTotal &&
-	 	sapinho3.getDistanciaPercorrida() == Sapo::distanciaTotal){
-		cout << "A corrida empatou em três: " << endl;
-		cout << "Sapinho 1: " << sapinho1.getQuantidadePulos() << "pulos;" << endl;
-		cout << "Sapinho 2: " << sapinho2.getQuantidadePulos() << "pulos;" << endl;
-		cout << "Sapinho 3: " << sapinho3.getQuantidadePulos() << "pulos;" << endl;
-	}
-	if(sapinho1.getDistanciaPercorrida() == Sapo::distanciaTotal &&
-		sapinho2.getDistanciaPercorrida() == Sapo::distanciaTotal &&
-	 	sapinho3.getDistanciaPercorrida() != Sapo::distanciaTotal){
-		cout << "A corrida empatou em dois: " << endl;
-		cout << "Sapinho 1: " << sapinho1.getQuantidadePulos() << "pulos;" << endl;
-		cout << "Sapinho 2: " << sapinho2.getQuantidadePulos() << "pulos;" << endl;
-	}
-	if(sapinho1.getDistanciaPercorrida() == Sapo::distanciaTotal &&
-		sapinho2.getDistanciaPercorrida() != Sapo::distanciaTotal &&
-	 	sapinho3.getDistanciaPercorrida() == Sapo::distanciaTotal){
-		cout << "A corrida empatou em dois: " << endl;
-		cout << "Sapinho 1: " << sapinho1.getQuantidadePulos() << "pulos;" << endl;
-		cout << "Sapinho 3: " << sapinho3.getQuantidadePulos() << "pulos;" << endl;
-	}
-	if(sapinho1.getDistanciaPercorrida() != Sapo::distanciaTotal &&
-		sapinho2.getDistanciaPercorrida() == Sapo::distanciaTotal &&
-	 	sapinho3.getDistanciaPercorrida() == Sapo::distanciaTotal){
-		cout << "A corrida empatou em dois: " << endl;
-		cout << "Sapinho 2: " << sapinho2.getQuantidadePulos() << "pulos;" << endl;
-		cout << "Sapinho 3: " << sapinho3.getQuantidadePulos() << "pulos;" << endl;
-
-	}
-
-	if(sapinho1.getDistanciaPercorrida() == Sapo::distanciaTotal &&
-		sapinho2.getDistanciaPercorrida() != Sapo::distanciaTotal &&
-	 	sapinho3.getDistanciaPercorrida() != Sapo::distanciaTotal){
-		cout << "O sapinho 1 foi o vencedor! " << endl;
-		cout << "Sapinho 1: " << sapinho1.getQuantidadePulos() << "pulos;" << endl;
-	}
-
-	if(sapinho1.getDistanciaPercorrida() != Sapo::distanciaTotal &&
-		sapinho2.getDistanciaPercorrida() == Sapo::distanciaTotal &&
-	 	sapinho3.getDistanciaPercorrida() != Sapo::distanciaTotal){
-		cout << "O sapinho 2 foi o vencedor! " << endl;
-		cout << "Sapinho 2: " << sapinho2.getQuantidadePulos() << "pulos;" << endl;
-	}
-
-	if(sapinho1.getDistanciaPercorrida() != Sapo::distanciaTotal &&
-		sapinho2.getDistanciaPercorrida() != Sapo::distanciaTotal &&
-	 	sapinho3.getDistanciaPercorrida() == Sapo::distanciaTotal){
-		cout << "O sapinho 3 foi o vencedor! " << endl;
-		cout << "Sapinho 3: " << sapinho3.getQuantidadePulos() << "pulos;" << endl;
-	}
-
+	
 	return 0;
 }
